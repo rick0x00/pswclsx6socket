@@ -5,9 +5,9 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "pswclsx6socket-coltroler"
-Date "2022-04-16"
+Date "2022-04-19"
 Rev "1"
-Comp "silicon 4007"
+Comp ""
 Comment1 "tec. Henrique Silva"
 Comment2 ""
 Comment3 ""
@@ -19,12 +19,12 @@ U 1 1 625AA4A2
 P 3200 4350
 F 0 "J1" H 3092 3725 50  0000 C CNN
 F 1 "pswcls-master" H 3092 3816 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 3200 4350 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Horizontal" H 3200 4350 50  0001 C CNN
 F 3 "~" H 3200 4350 50  0001 C CNN
 	1    3200 4350
 	1    0    0    1   
 $EndComp
-Text GLabel 3500 4450 2    50   Output ~ 0
+Text GLabel 3500 3950 2    50   Output ~ 0
 vll_relay-1
 Wire Wire Line
 	3400 4450 3500 4450
@@ -47,23 +47,23 @@ Text GLabel 3500 4550 2    50   Input ~ 0
 vcc_relay-master
 Wire Wire Line
 	3400 4550 3500 4550
-Text GLabel 3500 4350 2    50   Output ~ 0
+Text GLabel 3500 4050 2    50   Output ~ 0
 vll_relay-2
 Wire Wire Line
 	3400 4350 3500 4350
-Text GLabel 3500 4250 2    50   Output ~ 0
+Text GLabel 3500 4150 2    50   Output ~ 0
 vll_relay-3
 Wire Wire Line
 	3400 4250 3500 4250
-Text GLabel 3500 4150 2    50   Output ~ 0
+Text GLabel 3500 4250 2    50   Output ~ 0
 vll_relay-4
 Wire Wire Line
 	3400 4150 3500 4150
-Text GLabel 3500 4050 2    50   Output ~ 0
+Text GLabel 3500 4350 2    50   Output ~ 0
 vll_relay-5
 Wire Wire Line
 	3400 4050 3500 4050
-Text GLabel 3500 3950 2    50   Output ~ 0
+Text GLabel 3500 4450 2    50   Output ~ 0
 vll_relay-6
 Wire Wire Line
 	3400 3950 3500 3950
@@ -202,18 +202,14 @@ Wire Wire Line
 $Comp
 L power:+5V #PWR08
 U 1 1 625BD0B4
-P 6050 3000
-F 0 "#PWR08" H 6050 2850 50  0001 C CNN
-F 1 "+5V" H 6065 3173 50  0000 C CNN
-F 2 "" H 6050 3000 50  0001 C CNN
-F 3 "" H 6050 3000 50  0001 C CNN
-	1    6050 3000
+P 5150 4000
+F 0 "#PWR08" H 5150 3850 50  0001 C CNN
+F 1 "+5V" H 5165 4173 50  0000 C CNN
+F 2 "" H 5150 4000 50  0001 C CNN
+F 3 "" H 5150 4000 50  0001 C CNN
+	1    5150 4000
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6050 3000 6050 3100
-Wire Wire Line
-	6050 3100 5900 3100
 $Comp
 L Connector:Conn_01x15_Female J3
 U 1 1 625C1072
@@ -310,23 +306,23 @@ Wire Wire Line
 	8300 3350 8300 3450
 Wire Wire Line
 	7700 3450 8300 3450
-Text GLabel 5250 4200 2    50   Input ~ 0
+Text GLabel 5600 4100 2    50   Input ~ 0
 vcc_relay-master
 $Comp
 L power:+12V #PWR06
 U 1 1 62600A80
-P 5100 4100
-F 0 "#PWR06" H 5100 3950 50  0001 C CNN
-F 1 "+12V" H 5115 4273 50  0000 C CNN
-F 2 "" H 5100 4100 50  0001 C CNN
-F 3 "" H 5100 4100 50  0001 C CNN
-	1    5100 4100
+P 5450 4000
+F 0 "#PWR06" H 5450 3850 50  0001 C CNN
+F 1 "+12V" H 5465 4173 50  0000 C CNN
+F 2 "" H 5450 4000 50  0001 C CNN
+F 3 "" H 5450 4000 50  0001 C CNN
+	1    5450 4000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5100 4100 5100 4200
+	5450 4000 5450 4100
 Wire Wire Line
-	5250 4200 5100 4200
+	5600 4100 5450 4100
 NoConn ~ 7200 3450
 NoConn ~ 7200 3550
 NoConn ~ 7200 3650
@@ -349,4 +345,95 @@ NoConn ~ 7700 4550
 NoConn ~ 7700 4650
 NoConn ~ 7700 4750
 NoConn ~ 7700 4850
+$Comp
+L power:GND #PWR013
+U 1 1 626385A1
+P 5150 4550
+F 0 "#PWR013" H 5150 4300 50  0001 C CNN
+F 1 "GND" H 5155 4377 50  0000 C CNN
+F 2 "" H 5150 4550 50  0001 C CNN
+F 3 "" H 5150 4550 50  0001 C CNN
+	1    5150 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 626391DD
+P 5150 4300
+F 0 "C2" H 5265 4346 50  0000 L CNN
+F 1 "100nF" H 5265 4255 50  0000 L CNN
+F 2 "Capacitor_THT:C_Rect_L7.0mm_W2.0mm_P5.00mm" H 5188 4150 50  0001 C CNN
+F 3 "~" H 5150 4300 50  0001 C CNN
+	1    5150 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR012
+U 1 1 626468BA
+P 4750 4000
+F 0 "#PWR012" H 4750 3850 50  0001 C CNN
+F 1 "+5V" H 4765 4173 50  0000 C CNN
+F 2 "" H 4750 4000 50  0001 C CNN
+F 3 "" H 4750 4000 50  0001 C CNN
+	1    4750 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 4000 4750 4100
+$Comp
+L power:GND #PWR014
+U 1 1 62647A05
+P 4750 4800
+F 0 "#PWR014" H 4750 4550 50  0001 C CNN
+F 1 "GND" H 4755 4627 50  0000 C CNN
+F 2 "" H 4750 4800 50  0001 C CNN
+F 3 "" H 4750 4800 50  0001 C CNN
+	1    4750 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 6264878C
+P 4750 4250
+F 0 "R1" H 4820 4296 50  0000 L CNN
+F 1 "R" H 4820 4205 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal" V 4680 4250 50  0001 C CNN
+F 3 "~" H 4750 4250 50  0001 C CNN
+	1    4750 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 62649016
+P 4750 4600
+F 0 "D1" V 4789 4483 50  0000 R CNN
+F 1 "LED" V 4698 4483 50  0000 R CNN
+F 2 "LED_THT:LED_D5.0mm" H 4750 4600 50  0001 C CNN
+F 3 "~" H 4750 4600 50  0001 C CNN
+	1    4750 4600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4750 4450 4750 4400
+Wire Wire Line
+	4750 4800 4750 4750
+$Comp
+L power:+5V #PWR011
+U 1 1 6265A0F1
+P 6050 3000
+F 0 "#PWR011" H 6050 2850 50  0001 C CNN
+F 1 "+5V" H 6065 3173 50  0000 C CNN
+F 2 "" H 6050 3000 50  0001 C CNN
+F 3 "" H 6050 3000 50  0001 C CNN
+	1    6050 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 3100 6050 3100
+Wire Wire Line
+	6050 3100 6050 3000
+Wire Wire Line
+	5150 4450 5150 4550
+Wire Wire Line
+	5150 4000 5150 4150
 $EndSCHEMATC
